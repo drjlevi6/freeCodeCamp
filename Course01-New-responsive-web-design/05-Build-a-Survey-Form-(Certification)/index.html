@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- 05 - Build a Survey Form (Certification) -->
+<html lang="en">
+	<head>
+		<title>My Survey</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1 id="title">Survey</h1>
+		<p id="description">
+			Please complete this form:
+		</p>
+		
+		<form id="survey-form" method="post">
+
+			<!-- Name -->
+			<label id="name-label" for="name">Name:
+				<input id="name" type="text" 
+					placeholder="First and last name" required />
+			</label>
+
+			<!-- Email -->
+			<label id="email-label" 
+					for="email">Email Address:
+				<input id="email" type="email" 
+					placeholder="Email address" required />
+			</label>
+
+			<!-- Age -->
+			<label id="number-label" 
+					for="number">Age (years): 
+				<input id="number" type="number" 
+					placeholder="Age" min="13" max="120" required />
+			</label>
+
+			<!-- Referrer -->
+			<label for="referrer">How did you hear about us?
+				<select id="dropdown">
+					<option value="">(select one)</option>
+						<option value="1">Company’s News</option>
+						<option value="2">Company’s YouTube Channel</option>
+						<option value="3">Company’s Forum</option>
+					<option value="4">Other</option>
+				</select>
+			</label>
+			
+			<!-- User type -->
+			<p>What kind of user are you?</p>
+			<label for="personal-user">
+				<input id="personal-user" type="radio" 
+					name="user-type" value=1 /> Personal User
+			</label>
+			<label for="business-user">
+				<input id="business-user" type="radio" 
+					name="user-type" value=2 /> Business User
+			</label>
+			
+			<!-- Terms, conditions, privacy policy feedback-->
+			<p>Please give feedback on our 
+				Terms/Conditions and Privacy Policy:</p>
+			<label for="terms-and-conditions" checked>
+				<input id="terms-and-conditions" type="checkbox" 
+				name="terms-and-conditions" checked />
+					I agree with the Company's Terms and Conditions.
+			</label>
+			<label for="privacy">
+				<input id="privacy" type="checkbox"  name="privacy" checked />
+					I agree with the Company's Privacy Policy.
+			</label>
+
+			<!-- User comments -->
+			<label for="comments">Please provide additional comments if desired:
+      	<textarea id ="comments" rows="3" cols="30" 
+					placeholder="Awesome project!"></textarea>
+					<!--<textarea...> and </textarea> must be immediately adjacent -->
+  		</label>
+
+			<input id="submit" type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
